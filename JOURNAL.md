@@ -7,6 +7,57 @@ created_at: "2025-07-10"
 
 # JOURNAL.md
 
+## 7/30 CAD
+
+The goal for today is to create the BOM and finish the CAD. I started off by putting all the links I had collected into the `bom.csv`. There were two items that I had not found specific details for yet: The Buck Converter and the Push Buttons.
+
+Starting off the CAD design for the controller, I found a tutorial to make a generic controller in Fusion first using the Forms feature. Here's my progress through the tutorial series:
+
+<img width="1086" height="661" alt="CAD v1" src="https://github.com/user-attachments/assets/6694ea3a-21d6-4c88-befd-fde2a114d146" />
+<img width="1200" height="757" alt="CAD v2" src="https://github.com/user-attachments/assets/666a1ca0-8907-430b-a5cb-9ecc2add6318" />
+
+A quick update: This is much harder than expected. Even with the reference images shown in the screenshot above, it's hard to get the form to match the shape just how I want it to once there's overlapping points.
+
+> Finally an acceptable form:
+> 
+> <img width="1139" height="780" alt="CAD v3" src="https://github.com/user-attachments/assets/a5e2006a-cba5-4d67-b81a-8a8000d24ca5" />
+>
+> This form still needs many modifications to the shape becuase there are a lot of faces that are unaligned to how I'd want them to be.
+>
+> An hour later I have arrived at the following form. I now need to hollow it out and place correctly sized cavities for all the components.
+> <img width="1210" height="637" alt="CAD v4" src="https://github.com/user-attachments/assets/82adfe6c-31c3-4372-8e57-06063a0f9afe" />
+
+Fusion 360 refused to hollow out the bottom half of the controller for over 45 minutes. After loads of searching for help online, I discovered the fix for the issue accidentally when I was looking at the case: Since the bottom half of the form was too complex for fusion to inset, it gave me a single surface when I tried to inset the bottom case by the intended wall thickness. Unbeknownst to me, there was a tiny hole in the surface which I was trying to use as a cutting tool. It was patching this hole in the surface tab which finally allowed me to hollow out the bottom.
+
+Because there's so little space inside the controller, I need to place the components carefully inside. When placing the ESP32 and the OLED into the controller, I realized that they were both too tall to fit in with normal headers. For this reason I decided to switch the headers of the components that couldn't fit to 90 degee headers.
+
+<img width="982" height="600" alt="Angled Headers" src="https://github.com/user-attachments/assets/e1f7d2dc-fa57-4e5f-b54a-22073ca3623f" />
+
+> Cross section illustrating the space issue:
+> 
+> <img width="1016" height="508" alt="Cross section illustrating the space issue" src="https://github.com/user-attachments/assets/2460e28b-63e7-45b4-ae2a-149e4d3e6257" />
+
+
+Remaining Components to Add/Position:
+- 2nd Joystick
+- Action Buttons
+- D-Pad Buttons
+- E-Stop
+- Action Switches
+- NRF24L01
+- Buzzer
+- Battery
+
+At this current stage I have the joysticks mounted at 120 degree angles. This is not ideal, but if I can't find a bettery way to fit them in, I'll just fix the rotated X and Y in the firmware. Since the E-Stop is a little too tall, I'm extending the underside to fit it better. This will also help with making more space inside the controller.
+<img width="1140" height="722" alt="Extending the Underside for E-Stop" src="https://github.com/user-attachments/assets/603985bb-396a-4ffe-b382-198d3e64843e" />
+
+After many hours of work rearanging the components and fitting them into place, I have arrived at this design. The battery and battery holder will attach on the outside. (there is a slot on the underside for the wires to go in) The only remaining steps for the CAD are to finish the joystick cutouts, add hardware (screws, heated inserts), and make the receiver case. After the CAD the remaining work is on the firmware, BOM (halfway done), and README.
+
+<img width="500" alt="Pov A of CAD v5 EOD" src="https://github.com/user-attachments/assets/86d4eb32-fee5-4fd3-b790-0c7e9fcd2af6" />
+<img width="500" alt="Pov B of CAD v5" EOD src="https://github.com/user-attachments/assets/42be5248-3e95-448e-a358-8f8a06ba081b" />
+
+**Time spent: 16 hrs**
+
 ## 7/29 Design Continuation
 
 Over the past couple of weeks I slowly gotten to know the general plan, now I'm going to settle some design specifics like the locations of certain parts and where I can source them from.
@@ -45,6 +96,8 @@ I worked on the drawing from earlier today to include more details. I placed mor
 
 
 So far my plan is to make the controller split into two parts- like a sandwich! With a single flat seam, I can screw the entire controller together and have the benefit of a flat face for printing. I'll start the CAD later though, for now I'm going to work on the wiring. 
+
+<img width="300" alt="Pin Counts" src="https://github.com/user-attachments/assets/56f3de8f-8cac-46ff-821f-372fe91df69b" />
 
 I'm not sure yet if a single board PCB will fit inside nicely. One idea is to make a breakout PCB for the ESP32 Dev Board and connect wires inside of it to the board, but I'll start with a schematic for the entire controller.
 
