@@ -3,11 +3,15 @@
 ### TL;DR It's a remote control system.
 GripCtrl is a wireless controller based on the ESP32 DevKitC which can communicate with other devices easily (WiFi, Bluetooth, ESP-Now, RF via NRF24L01). With a built in UL 60947-5-5 emergency stop button, it's primarily designed for remotely controlling robots and other similar contraptions. When developing different projects, RF modules can be tedious and time consuming to wire up. GripCtrl was made to provide a simple way of remotely controlling projects, whether they're in development or production.
 
+<img width="1000" alt="GripCtrl-render" src="https://github.com/user-attachments/assets/2b57aa78-8c80-44cb-a54d-193690f188d1" />
+<img width="1000" alt="gripctrl-receiver-render" src="https://github.com/user-attachments/assets/c4249340-0fe5-4f7a-80ff-810bf49c034b" />
+
+
 ## Images
 
 ### Controller
 
-<img width="799" height="789" alt="controller-front" src="https://github.com/user-attachments/assets/e148120e-aaa7-4703-983c-872702d9ebf7" />
+<img width="400" alt="controller-front" src="https://github.com/user-attachments/assets/e148120e-aaa7-4703-983c-872702d9ebf7" />
 <img width="500" alt="controller-front-transparent" src="https://github.com/user-attachments/assets/f5be1cf1-6e5c-4b2f-931d-f39de9b493c9" />
 <img width="500" alt="controller-back-transparent" src="https://github.com/user-attachments/assets/e95ce75d-0df5-4ddf-8c7c-7d747084117e" />
 
