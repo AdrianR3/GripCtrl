@@ -7,6 +7,45 @@ created_at: "2025-07-10"
 
 # JOURNAL.md
 
+## 7/31 Final Day
+
+Today is the final day of work! I need to finish the CAD and add some basic firmware.
+
+
+This is the design I came up with for the receiver: It's a small box with another ESP32 and RF module. It's designed to be attached to what you want to control.
+<img width="889" height="601" alt="Receiver" src="https://github.com/user-attachments/assets/0515c1f3-ae5c-4f1f-a51b-4aa252f627ef" />
+
+After placing all the components and making sure I got the right hole diameters, I have created the receiver. It uses another ESP32 for the microcontroller along with another NRF module and a piezo. There are holes for jumpers along the top. It's designed to be powered by 3 or 5V from whatever project it's attached to.
+
+<img width="789" height="771" alt="Almost done" src="https://github.com/user-attachments/assets/be3cf453-5b35-4ee2-a8b4-1375d1c6ac69" />
+
+The design process for the receiver was relatively straightforward compared to the controller. I did mount the RF module upside down at a 45 degree angle so that I could maintain the same overall dimensions for the box (50 x 100 x 35mm, not including mounting tabs).
+
+> The receiver requires four M3x6 screws and four M3x14 or M3x16 screws. (4 to secure the ESP32, 4 to secure the lid) All 8 of these screws need their own M3 heat-set inserts.
+>
+> <img width="742" height="507" alt="Screws Crossection" src="https://github.com/user-attachments/assets/d6ef2e2c-1349-41c8-abe3-ba7ea67ef19e" />
+
+One of the remaining issues was the placement of the joysticks. Before resolving that I went and I perfected the Joystick model I found online to use more accurate dimensions. I also added a joint in Fusion to approximate how it would move.
+<img width="996" height="656" alt="Joystick" src="https://github.com/user-attachments/assets/18f97658-d3d7-4ddf-be59-6c39930ee110" />
+
+I finalized the cutouts in the top for the joysticks. They should allow at least 80 degrees of freedom. To make sure they fit, the joysticks themselves are at 45 degree angles relative to the controller. The cutouts were made by revolving a profile around the Joystick's vertical axis. This profile was an approximation based on a 40 degree and 0 degree projection of the joystick.
+<img width="1015" height="563" alt="Joystick Cutouts" src="https://github.com/user-attachments/assets/693f0769-42b7-40ef-a513-4511a8b4c20a" />
+
+The cad up until this point has taken 6 hours. Next up is mounting the joysticks:
+
+<img width="500" alt="Joystick Mount Sketch" src="https://github.com/user-attachments/assets/e0c5ae7f-ba88-483b-ac7b-15b7351fe965" />
+
+Across all the components mounted inside, there are 18 M3x6 screws required and 8 3d printed spacers.
+<img width="998" height="641" alt="Screws" src="https://github.com/user-attachments/assets/5977b471-23e0-4af0-8383-984ff36e6cab" />
+
+Now to do firmware, BOM, and README!
+
+<img width="400" alt="Final Receiver" src="https://github.com/user-attachments/assets/07ab6793-1447-4cb4-be44-22fe02b31bc1" />
+<img width="400" alt="Final Controller" src="https://github.com/user-attachments/assets/be6645ac-3571-4f31-9928-49139e312e8c" />
+
+
+**Time spent: 8 hrs**
+
 ## 7/30 CAD
 
 The goal for today is to create the BOM and finish the CAD. I started off by putting all the links I had collected into the `bom.csv`. There were two items that I had not found specific details for yet: The Buck Converter and the Push Buttons.
