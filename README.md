@@ -50,9 +50,11 @@ Refer to this image to find out which buttons go where:
 |M3x6 SHCS                                      |           |26 |Order w/below  |https://us.store.bambulab.com/products/m3-socket-head-cap-machine-screws-shcs-1                                         |
 |M3x14 SHCS                                     |(or M3x16) |4  |10.59          |https://us.store.bambulab.com/products/m3-socket-head-cap-machine-screws-shcs-1                                         |
 |M3 Heat-Set Inserts                            |           |28 |12.49          |https://www.amazon.com/Yaocom-Inserts-Threaded-Printing-Components/dp/B0DG59PW2R                                        |
+|Right Angle Headers[^2]                        |           |38 |5.99          |https://www.amazon.com/Headers-Single-2-54mm-Breadboard-10-Piece/dp/B01EWSOGG4                                        |
 |Buck Converter (9V to 5V)                      |           |1  |5.87           |https://www.aliexpress.us/item/3256806137313905.html                                                                    |
 |9V Battery[^1]                                 |           |1  |N/A            |N/A                                                                                                                     |
 |9V Snap Connector[^1]                          |           |1  |N/A            |N/A                                                                                                                     |
 [^1]: Not Included in Total Price
+[^2]: Forgot to add this before form, was 131.13 before.
 
-**Total Price: `$131.13`**
+**Total Price: `$137.12`**
