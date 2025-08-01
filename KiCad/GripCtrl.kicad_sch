@@ -4,6 +4,9 @@
 	(generator_version "9.0")
 	(uuid "c08a66aa-a87e-4fd0-ac2a-956f83ef4adb")
 	(paper "A4")
+	(title_block
+		(title "GripCtrl - Unified Wiring Diagram")
+	)
 	(lib_symbols
 		(symbol "Custom_Symbols:FF01"
 			(exclude_from_sim no)
