@@ -7,6 +7,8 @@ created_at: "2025-07-10"
 
 # JOURNAL.md
 
+**Total time spent: 48 hours**
+
 ## 7/31 Final Day
 
 Today is the final day of work! I need to finish the CAD and add some basic firmware.
